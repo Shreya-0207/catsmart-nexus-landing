@@ -68,8 +68,8 @@ export default {
 				},
 				catsmart: {
 					primary: '#1890FF',
-					dark: '#0B0F1A',
-					gray: '#1A1D23',
+					dark: '#050810',
+					gray: '#0D1117',
 				}
 			},
 			borderRadius: {
