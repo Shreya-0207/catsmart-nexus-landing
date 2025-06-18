@@ -1,5 +1,12 @@
 
 import React from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { Wrench, AlertTriangle, Smartphone, Building, BarChart3 } from 'lucide-react';
 
 const SolutionsSection = () => {
@@ -7,61 +14,58 @@ const SolutionsSection = () => {
     {
       icon: Wrench,
       title: "PIMS",
-      subtitle: "Gas Pipeline Integrity Monitoring",
-      description: "Monitors gas pipelines for vibration anomalies and structural risks — ensuring safety and compliance with real-time photonic sensing."
+      description: "Gas pipeline integrity monitoring system using photonic sensors."
     },
     {
       icon: AlertTriangle,
       title: "SARATHI",
-      subtitle: "Asset Management & Intelligent Alerts",
-      description: "Tracks industrial assets digitally, organizes them hierarchically, and triggers real-time alerts for potential failures or safety breaches."
+      description: "Asset management platform with alerting and digital traceability."
     },
     {
       icon: Smartphone,
       title: "Dr. T App",
-      subtitle: "Personal Health + Breath Diagnostics",
-      description: "A mobile app that enables users to monitor vitals and connect with breath-analysis devices for deeper diagnostic insights — powered by CATSMART."
+      description: "Mobile app that connects to breath analysis devices in real time."
     },
     {
       icon: Building,
       title: "Saamveda",
-      subtitle: "Hospital Device Data Aggregation",
-      description: "Connects hospital hardware (from CATS Global) to CATSMART's big data engine — enabling real-time insights and alerts."
+      description: "Real-time hospital data aggregation across multiple medical devices."
     },
     {
       icon: BarChart3,
       title: "CATSMART Dashboard",
-      subtitle: "Central Intelligence for All Your Data",
-      description: "Unified login point to access live analytics, device monitoring, alerts, and reports — across all CATSMART-powered systems."
+      description: "Live interface to visualize, analyze, and manage sensor data."
     }
   ];
 
   return (
-    <section id="solutions" className="py-20 px-4 bg-catsmart-gray">
+    <section id="solutions" className="py-20 px-4 bg-[#111111]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-          Real-Time Solutions Built for Critical Systems
+          Solutions
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index) => (
-            <div
-              key={index}
-              className="bg-catsmart-dark p-8 rounded-xl hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-2 border border-slate-600"
-            >
-              <solution.icon className="w-12 h-12 text-catsmart-primary mb-6" />
-              <h3 className="text-xl font-bold text-white mb-2">
-                {solution.title}
-              </h3>
-              <h4 className="text-lg font-semibold text-catsmart-primary mb-4">
-                {solution.subtitle}
-              </h4>
-              <p className="text-gray-300 leading-relaxed">
-                {solution.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <Carousel className="w-full max-w-5xl mx-auto" opts={{ align: "start", loop: true }}>
+          <CarouselContent>
+            {solutions.map((solution, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-4">
+                  <div className="bg-catsmart-dark p-6 rounded-xl h-full hover:bg-slate-800 transition-all duration-300 transform hover:-translate-y-1 border border-slate-600 min-h-[200px] flex flex-col">
+                    <solution.icon className="w-10 h-10 text-catsmart-primary mb-4" />
+                    <h3 className="text-lg font-bold text-white mb-3">
+                      {solution.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed flex-grow">
+                      {solution.description}
+                    </p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="text-white border-slate-600 hover:bg-catsmart-primary hover:border-catsmart-primary hover:shadow-lg hover:shadow-catsmart-primary/25 transition-all duration-300" />
+          <CarouselNext className="text-white border-slate-600 hover:bg-catsmart-primary hover:border-catsmart-primary hover:shadow-lg hover:shadow-catsmart-primary/25 transition-all duration-300" />
+        </Carousel>
       </div>
     </section>
   );

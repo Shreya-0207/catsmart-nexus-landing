@@ -14,48 +14,48 @@ const CarouselSection = () => {
     {
       icon: Brain,
       heading: "Clean Data, Confident Decisions",
-      subheading: "Filters out noise in real time using AI — for high-stakes monitoring in industries like manufacturing and infrastructure."
+      subheading: "AI algorithms filter noise in real time for high-stakes monitoring."
     },
     {
       icon: Zap,
       heading: "Raw Signals to Smart Insights",
-      subheading: "CATSMART translates sensor data into actionable info — powering systems in energy, healthcare, and smart cities."
+      subheading: "We transform sensor data into actionable intelligence."
     },
     {
       icon: Clock,
       heading: "Decisions in Milliseconds",
-      subheading: "Monitors vibration, air quality, and temperature simultaneously — critical for real-time alerts in industrial automation."
+      subheading: "Real-time sensing of vibration, temperature, and air quality."
     },
     {
       icon: Scale,
       heading: "Scales With Your Sensors",
-      subheading: "Handles thousands of data points per second — ideal for large sensor networks in defense, transportation, and research."
+      subheading: "Thousands of data points processed per second across environments."
     },
     {
       icon: Globe,
       heading: "Built for the Real World",
-      subheading: "From pollution tracking to exhaled breath analysis, CATSMART adapts to diverse environments and data types."
+      subheading: "Flexible for defense, healthcare, and environmental use-cases."
     }
   ];
 
   return (
-    <section className="py-20 px-4 bg-catsmart-dark">
+    <section className="py-20 px-4 bg-[#0A0A0A]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-          How CATSMART Powers Real-World Intelligence
+          CATSMART 5Vs Capabilities
         </h2>
         
-        <Carousel className="w-full max-w-5xl mx-auto">
+        <Carousel className="w-full max-w-5xl mx-auto" opts={{ align: "start", loop: true }}>
           <CarouselContent>
             {slides.map((slide, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-6">
-                  <div className="bg-catsmart-gray p-8 rounded-xl h-full flex flex-col items-center text-center hover:bg-slate-800 transition-all duration-300 border border-slate-700">
-                    <slide.icon className="w-12 h-12 text-catsmart-primary mb-6" />
+                <div className="p-4">
+                  <div className="bg-catsmart-gray p-8 rounded-xl h-full flex flex-col items-center text-center hover:bg-slate-800 transition-all duration-300 border border-slate-700 min-h-[240px] justify-center">
+                    <slide.icon className="w-14 h-14 text-catsmart-primary mb-6" />
                     <h3 className="text-xl font-bold text-white mb-4 leading-tight">
                       {slide.heading}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed text-sm">
                       {slide.subheading}
                     </p>
                   </div>
@@ -63,8 +63,8 @@ const CarouselSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-white border-slate-600 hover:bg-catsmart-primary hover:border-catsmart-primary" />
-          <CarouselNext className="text-white border-slate-600 hover:bg-catsmart-primary hover:border-catsmart-primary" />
+          <CarouselPrevious className="text-white border-slate-600 hover:bg-catsmart-primary hover:border-catsmart-primary hover:shadow-lg hover:shadow-catsmart-primary/25 transition-all duration-300" />
+          <CarouselNext className="text-white border-slate-600 hover:bg-catsmart-primary hover:border-catsmart-primary hover:shadow-lg hover:shadow-catsmart-primary/25 transition-all duration-300" />
         </Carousel>
       </div>
     </section>

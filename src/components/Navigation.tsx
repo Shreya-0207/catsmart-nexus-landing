@@ -43,7 +43,7 @@ const Navigation = () => {
             href="https://catsmart.io/#/get-domain"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-catsmart-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-300"
+            className="bg-catsmart-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-catsmart-primary/25 font-semibold"
           >
             Login
           </a>

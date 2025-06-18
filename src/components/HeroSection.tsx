@@ -23,7 +23,7 @@ const HeroSection = () => {
             href="https://catsmart.io/#/get-domain"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-catsmart-primary hover:bg-blue-600 text-white font-semibold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-block bg-catsmart-primary hover:bg-blue-600 text-white font-bold text-lg px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-catsmart-primary/30"
           >
             Login to Dashboard
           </a>
